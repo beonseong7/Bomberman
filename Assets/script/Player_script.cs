@@ -17,7 +17,7 @@ public class Player_script : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void Update()//플레이어 이동제어
     {
         Vector2 move = Vector2.zero;
         if (this.gameObject.name == "1P")
@@ -78,8 +78,8 @@ public class Player_script : MonoBehaviour
     {
         yield return new WaitForSeconds(2.51f);
         Bomb_Count++;
-    }
-    private void OnTriggerEnter2D(Collider2D collision)
+    }//폭탄 쿨타임
+    private void OnTriggerEnter2D(Collider2D collision)//충돌오브젝트에따른 이벤트 처리
     {
         if (collision.gameObject.tag == "explode")
         {
